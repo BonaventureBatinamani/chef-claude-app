@@ -1,13 +1,163 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Inter' sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color:  #FAFAF8;
+;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80px;
+  width:100vw;
+  background-color:  #FFFFFF;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+  border-radius: 16px;
+  padding: 24px 16px ;
+  margin-bottom: 80px;
+
+}
+
+nav{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 24px 16px ;
+  gap: 10px;
+  
+}
+
+nav img{
+  width: 40px;
+  height: auto;
+  
+}
+
+nav span{
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+form{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 80%;
+  gap: 20px;
+  padding: 0px 50px;
+}
+
+.ingredient {
+  height: 45px;
+  width: 80%;
+  padding: 5px 10px;
+  
+  border-radius: 16px;
+  border-color: darkgray;
+
+
+}
+
+.ingredient ::placeholder{
+  font-family: 'Inter';
+}
+
+.add-button {
+  height: 45px;
+  width:150px;
+  background-color: black;
+  color: white;
+  font-family: 'Inter';
+  font-weight: 500;
+  border-radius: 16px;
+  padding: 5px 10px;
+}
+
+main {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  font-family: 'Inter';
+}
+
+.get-recipe-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    background: #F0EFEB;
+    padding: 10px 28px;
+}
+
+.get-recipe-container h3 {
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 24px;
+    font-family: 'Inter';
+}
+
+.get-recipe-container p {
+    color: #6B7280;
+    font-size: 0.875rem;
+    line-height: 20px;
+}
+
+.get-recipe-container button {
+    border: none;
+    border-radius: 6px;
+    background: #D17557;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    color: #FAFAF8;
+    padding: 9px 17px;
+    font-family: Inter, sans-serif;
+    font-size: 0.875rem;
+    cursor: pointer;
+}
+
+ul.ingredients-list {
+    margin-bottom: 48px;
+}
+
+ul.ingredients-list > li {
+    color: #475467;
+    line-height: 28px;
+    font-family: 'Inter';
+}
+
+.suggested-recipe-container {
+    color: #475467;
+    line-height: 28px;
+    font-size: 1.125rem;
+    font-weight: 400;
+    margin-left:10px ;
+    width: 80%;
+}
+
+.suggested-recipe-container ul li, .suggested-recipe-container ol li {
+    margin-bottom: 8px;
+    
+}
+
+.recipe-shown-section{
+  margin-left: 20px;
+  width:80%;
+}
+
+.suggested-recipe-container {
+    color: #475467;
+    line-height: 28px;
+    font-size: 1.125rem;
+    font-weight: 400;
+}
+
+.suggested-recipe-container ul li, .suggested-recipe-container ol li {
+    margin-bottom: 8px;
 }
