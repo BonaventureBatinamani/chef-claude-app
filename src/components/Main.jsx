@@ -11,7 +11,7 @@ export default function Main (){
     
 
     const [ingredients, setIngredients] = React.useState(
-        []
+        ["chicken", "all the main spices", "corn", "heavy cream", "pasta"]
     ) ;
 
     async function showRecipe(){
@@ -24,7 +24,13 @@ export default function Main (){
 
     const [recipeShown, setRecipeShown] = React.useState (false);
 
-
+    const recipeSection = React.useRef(null)
+    
+    React.useEffect(()=>{
+       if ( recipe !== "" && recipeSection.current !== null){
+            recipeSection.current.scrollIntoView({behavior: "smooth"})
+       }  
+    }, [recipe])
     
 
 
@@ -45,7 +51,7 @@ export default function Main (){
     })
     return(
         <main>
-            <form action ={addIngredient} method = "POST" >
+            <form action ={addIngredient}  >
                 <input className="ingredient" type="text" name="ingredient" placeholder="e.g. oregano"></input>
                 <button  className="add-button" type="submit">+ Add Ingredient</button>
             </form>
@@ -55,13 +61,13 @@ export default function Main (){
                 ingredients = {ingredients}
                 ingredientsList={ingredientsList}
                 showRecipe = {showRecipe}
+                ref ={recipeSection}
             />
 
-            <ClaudeRecipe
-                recipeShown = {recipeShown}
+            {recipeShown && <ClaudeRecipe
                 showRecipe ={recipe}
             />
-
+            }
             
         </main>
         

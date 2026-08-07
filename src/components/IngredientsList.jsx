@@ -4,8 +4,8 @@ export default function IngredientsList(props){
             { props.ingredients.length > 0 ? <section>
                 <h2>Ingredients on hand:</h2>
                 <ul className="ingredients-list" aria-live="polite">{props.ingredientsList}</ul>
-                {props.ingredients.length > 3 &&<div className="get-recipe-container">
-                    <div>
+                {props.ingredients.length > 3 &&<div ref= {props.ref} className="get-recipe-container">
+                    <div >
                         <h3>Ready for a recipe?</h3>
                         <p>Generate a recipe from your list of ingredients.</p>
                     </div>
@@ -16,3 +16,4 @@ export default function IngredientsList(props){
         </>
     )
 }
+// ref={props.ref}

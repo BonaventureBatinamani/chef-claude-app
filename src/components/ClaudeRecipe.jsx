@@ -3,7 +3,7 @@ export default function ClaudeRecipe(props){
     return(
         <section className= "suggested-recipe-container">
             <h2>Chef Claude Recommends:</h2>
-            {props.recipeShown && (<ReactMarkdown>{props.showRecipe}</ReactMarkdown>)}
+            <ReactMarkdown>{props.showRecipe}</ReactMarkdown>
         </section>
         
     )
